@@ -26,14 +26,19 @@ public class Kiosk {
         while (true) {
             try {
                 System.out.println("////////// 원하시는 메뉴의 번호를 입력해주세요. //////////");
+                System.out.println("0. 종료");
                 int menuNumber = scanner.nextInt();
                 scanner.nextLine();
 
-                System.out.println("원하시는 메뉴가 " + menuNumber + "(이)가 맞나요?");
-                if (menuNumber < 1 || menuNumber > menuItem.size()) {
+                if(menuNumber == 0){
+                    System.out.println("주문을 종료합니다.");
+                    break;
+                }
+                if(menuNumber < 0 || menuNumber > menuItem.size()) {
                     System.out.println("메뉴에 없는 번호입니다. 다시 입력해주세요.");
                     continue;
                 }
+                System.out.println("원하시는 메뉴가 " + menuNumber + "(이)가 맞나요?");
                 System.out.println("맞으시면 숫자 1 을 입력 해주세요.");
                 System.out.println("다시 선택 하시려면 2 를 입력해 주세요.");
                 int confirm = scanner.nextInt();
