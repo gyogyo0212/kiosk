@@ -9,11 +9,13 @@ public class MainLv3 {
     public static void main(String[] args) {
         ArrayList<MenuItem> menuItem = new ArrayList<MenuItem>();
 
-        menuItem.add(new MenuItem(""));
-        menuItem.add(menuItem2);
-        menuItem.add(menuItem3);
-        menuItem.add(menuItem4);
+        menuItem.add(new MenuItem("1.ShackBuger ", "W 6.9", "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
+        menuItem.add(new MenuItem("2.SmokeBuger ", "W 8.9", "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
+        menuItem.add(new MenuItem("3.CheeseBuger", "W 6.9", "포테이토 번과 비프페티, 치즈가 토핑된 치즈버거"));
+        menuItem.add(new MenuItem("4.HamBuger   ", "W 6.9", "비프패티를 기반으로 야채가 들어간 버거"));
 
 
+        Kiosk kiosk = new Kiosk(menuItem);
+        kiosk.start();
     }
 }
